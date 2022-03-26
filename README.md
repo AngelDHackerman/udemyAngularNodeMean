@@ -24,3 +24,7 @@
 
 `ng serve`    Iniciamos el proyecto en Angular. 
 
+
+4. Generando componentes. 
+
+`ng generate component cursos` Asi creamos un nuevo componente desde la consola de comandos.
