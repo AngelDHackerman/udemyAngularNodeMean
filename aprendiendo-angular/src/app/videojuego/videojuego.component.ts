@@ -21,4 +21,7 @@ export class VideojuegoComponent implements OnInit, DoCheck{
   ngDoCheck(): void { // ? Se ejecuta cada que se ejecuta un cambio en el componente o en la aplicacion de angular.
     console.log('DoCheck ejecutado')
   }
+  cambiarTitulo () {
+    this.titulo = 'Nuevo titulo del componente';
+  }
 }
