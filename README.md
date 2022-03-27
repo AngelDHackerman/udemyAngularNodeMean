@@ -24,6 +24,8 @@
 
 `ng serve`    Iniciamos el proyecto en Angular. 
 
+`ng serve -o` para ejecutar la pagina en nuestro navegador por defecto.
+
 
 4. Generando componentes. 
 
