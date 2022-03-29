@@ -1,9 +1,8 @@
 <h1>Hola probando los componentes en Angular</h1>
+<button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
+<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
 
-
-<videojuego></videojuego>
-<videojuego></videojuego>
-<videojuego></videojuego>
+<videojuego *ngIf="mostrar_videojuegos"></videojuego> <!-- ? ngif en este caso hace visible o invisible a video juegos -->
 
 <zapatillas></zapatillas>
 

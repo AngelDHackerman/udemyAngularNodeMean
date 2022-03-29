@@ -1,11 +1,11 @@
-import { Component, OnInit, DoCheck } from "@angular/core";
+import { Component, OnInit, DoCheck, OnDestroy } from "@angular/core";
 
 @Component ({
   selector: 'videojuego',
   templateUrl: './videojuego.component.html' // ? Asi es como traemos el codigo del archivo videojuego.component.html
 })
 
-export class VideojuegoComponent implements OnInit, DoCheck{
+export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy{
   public titulo: string;
   public listado: string;
 
@@ -23,5 +23,8 @@ export class VideojuegoComponent implements OnInit, DoCheck{
   }
   cambiarTitulo () {
     this.titulo = 'Nuevo titulo del componente';
+  }
+  ngOnDestroy(): void { // ? Se ejecuta algo antes de eliminar la instancia de un componente
+    console.log('onDestroy ejecutado!!!')
   }
 }
