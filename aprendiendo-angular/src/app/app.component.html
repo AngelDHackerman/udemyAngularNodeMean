@@ -1,9 +1,23 @@
-<h1>Hola probando los componentes en Angular</h1>
-<button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
-<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
+<div [ngStyle]="{
+  'background': config.fondo,
+  'padding' : '20px',
+  'border' : '5px solid black',
+  'border-color' : config.color
+}">
 
-<videojuego *ngIf="mostrar_videojuegos"></videojuego> <!-- ? ngif en este caso hace visible o invisible a video juegos -->
+  <h1>
+    Bienvenido al {{ title }}
+  </h1>
 
-<zapatillas></zapatillas>
+  <p>{{ descripcion }}</p>
 
-<app-cursos></app-cursos>
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
+
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego> <!-- ? ngif en este caso hace visible o invisible a video juegos -->
+
+  <zapatillas></zapatillas>
+
+  <app-cursos></app-cursos>
+
+</div>
