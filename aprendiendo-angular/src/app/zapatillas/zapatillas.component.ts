@@ -14,6 +14,7 @@ export class ZapatillasComponent implements OnInit{
 
   constructor () {
     this.zapatillas = [
+      new Zapatillas('Nike Airmax', 'Nike', 'Rojas', 190, true),
       new Zapatillas('Reebook Classic', 'Reebook', 'Blanco', 80, true), // ? Esto es una clase, un molde para las zapatillas
       new Zapatillas('Nike Runner D', 'Nike', 'Negro', 60, true),
       new Zapatillas('Adidas Yezzy', 'Adidas', 'Gris', 180, false)
