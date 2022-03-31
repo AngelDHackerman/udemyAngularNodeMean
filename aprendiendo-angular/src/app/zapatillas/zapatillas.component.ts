@@ -13,6 +13,7 @@ export class ZapatillasComponent implements OnInit{
   public zapatillas: Array<Zapatillas>; // ? zapatillas es de tipo array de tipo zapatillas
   public marcas: String[];
   public color: string;
+  public mi_marca: string;
 
   constructor () {
     this.zapatillas = [
@@ -24,6 +25,7 @@ export class ZapatillasComponent implements OnInit{
     ];
     this.marcas = new Array;
     this.color = 'yellow';
+    this.mi_marca = 'Angel\'s shoes';
   }
   ngOnInit() {
       console.log(this.zapatillas);
@@ -37,5 +39,11 @@ export class ZapatillasComponent implements OnInit{
       }
     });
     console.log(this.marcas);
+  }
+  getMarca () {
+    alert(this.mi_marca)
+  }
+  addMarca () {
+    this.marcas.push(this.mi_marca)
   }
 }
