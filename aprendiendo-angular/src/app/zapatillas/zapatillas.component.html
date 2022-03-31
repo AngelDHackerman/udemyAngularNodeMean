@@ -15,7 +15,10 @@
   Compra las zapatillas de las mejores marcas:
 </p>
   <ul>
-    <li *ngFor="let marca of marcas; let indice = index">{{ indice + ' ' + marca }}</li> <!-- ? ngFor hace el recorrido de las marcas y let indice = index nos da el indice de la marca  -->
+    <li *ngFor="let marca of marcas; let indice = index">
+      {{ indice + ' ' + marca }}  <!-- ? ngFor hace el recorrido de las marcas y let indice = index nos da el indice de la marca  -->
+      <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
   </ul>
 
 <p>Las deportivas que tenemos disponibles son:</p>
@@ -37,6 +40,7 @@
 <p>El color de la mayoria de nuestras zapatillas es:</p>
 
 <ul [ngSwitch]="color">
+  <input type="text" [(ngModel)]="color" placeholder="yellow, blue, red, orange">
   <li *ngSwitchCase="'yellow'">
     El color predominandte es el <span [ngStyle]="{'background': color}">amarillo</span>.
   </li>

@@ -46,4 +46,8 @@ export class ZapatillasComponent implements OnInit{
   addMarca () {
     this.marcas.push(this.mi_marca)
   }
+  borrarMarca (index: number) {
+    // delete this.marcas[index]
+    this.marcas.splice(index, 1) // * splice borra (index: el indice donde empieza, n: cuantos se borraran(en este caso solo 1))
+  }
 }
