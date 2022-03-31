@@ -1,9 +1,23 @@
 <h2>{{ titulo }}</h2>
+
+<p>
+  Compra las zapatillas de las mejores marcas:
+</p>
+  <ul>
+    <li *ngFor="let marca of marcas; let indice = index">{{ indice + ' ' + marca }}</li> <!-- ? ngFor hace el recorrido de las marcas y let indice = index nos da el indice de la marca  -->
+  </ul>
+
+<p>Las deportivas que tenemos disponibles son:</p>
+
 <ul>
   <li *ngFor=" let deportiva of zapatillas"> <!-- ? asi se hace un for en angular -->
-    {{ deportiva.nombre}} - <strong>${{ deportiva.precio}} </strong>
+      <span [ngStyle]="{
+        'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+      }"> <!-- ? Si deportiva no esta en stock la zapatilla sera tachada -->
+        {{ deportiva.nombre}} - <strong>${{ deportiva.precio}} </strong>
+      </span>
 
-    <span *ngIf="deportiva.precio <= 80"
+      <span *ngIf="deportiva.precio <= 80"
       [style.background]="deportiva.precio <= 80 ? 'green' : 'transparent'"
       [style.color]="deportiva.precio <= 80 ? 'white' : 'black'">EN OFERTA!</span>
   </li>
