@@ -12,6 +12,7 @@ export class ZapatillasComponent implements OnInit{
   public titulo: string = 'Componente de zapatillas';
   public zapatillas: Array<Zapatillas>; // ? zapatillas es de tipo array de tipo zapatillas
   public marcas: String[];
+  public color: string;
 
   constructor () {
     this.zapatillas = [
@@ -22,6 +23,7 @@ export class ZapatillasComponent implements OnInit{
       new Zapatillas('Adidas Yezzy', 'Adidas', 'Gris', 180, false)
     ];
     this.marcas = new Array;
+    this.color = 'yellow';
   }
   ngOnInit() {
       console.log(this.zapatillas);
