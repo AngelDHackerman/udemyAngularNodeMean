@@ -50,4 +50,7 @@ export class ZapatillasComponent implements OnInit{
     // delete this.marcas[index]
     this.marcas.splice(index, 1) // * splice borra (index: el indice donde empieza, n: cuantos se borraran(en este caso solo 1))
   }
+  onBlur () {
+    console.log('has salido del input')
+  }
 }
