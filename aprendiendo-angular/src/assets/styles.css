@@ -1,4 +1,10 @@
 .altoPrecio {
-  color: lightcoral;
+  color: yellowgreen;
   font-size: 20px;
+}
+.fondoRojo {
+  background-color: red;
+}
+.subra {
+  text-decoration: underline;
 }

@@ -29,7 +29,10 @@
         'text-decoration': !deportiva.stock ? 'line-through' : 'none'
       }"> <!-- ? Si deportiva no esta en stock la zapatilla sera tachada -->
         {{ deportiva.nombre}} -
-        <strong [class.altoPrecio]="deportiva.precio >= 100"> <!-- ? Asi se agregan las clases en Angular -->
+        <strong [class.altoPrecio]="deportiva.precio >= 100"
+                [ngClass]="{
+                  'fondoRojo': deportiva.precio > 100,
+                  'subra': deportiva.marca == 'Nike'}"> <!-- ? Asi se agregan las clases en Angular -->
           ${{ deportiva.precio}}
         </strong>
       </span>
