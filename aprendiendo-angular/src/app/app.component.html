@@ -19,8 +19,17 @@
   <!--
   <app-cursos></app-cursos>
 -->
-
 <!-- <zapatillas></zapatillas> -->
+
+<nav> <!-- ? Asi se definen las rutas en el HTML despues de haber creado el archivo app.routing.ts -->
+  <a [routerLink]="['/']">Home</a>
+  &nbsp; <!-- ? Esto crea un espacio entre palabras -->
+  <a [routerLink]="['/zapatillas']">Zapatillas</a>
+  &nbsp;
+  <a [routerLink]="['/cursos']">Cursos</a>
+  &nbsp;
+  <a [routerLink]="['/videojuego']">Videojuetos</a>
+</nav>
 
 <router-outlet></router-outlet> <!-- ! rotuer-outlet es creado automaticamente y asi se llama la etiqueta del sistema de rutas -->
 
