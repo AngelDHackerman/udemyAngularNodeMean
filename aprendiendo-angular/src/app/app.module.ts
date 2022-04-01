@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // ! importante importar esto para que los ngModel funcionen.
+import { routing, appRoutingProviders } from './app.routing';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +21,12 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule   // ! Esto va junto con la importancion de los module para los ngModels
+    FormsModule,   // ! Esto va junto con la importancion de los module para los ngModels
+    routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
