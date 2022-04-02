@@ -20,8 +20,14 @@ export class CursosComponent implements OnInit {
     this._route.params.subscribe((params: Params) => {  // ? El metodo subscribe sirve para recojer el nombre pasado por la url.
       this.nombre = params['nombre'];
       this.followers = +params['followers']; // ! el signo + hace del params['followers'] un dato de tipo Number
-      console.log(this.nombre)
+
+      if (this.nombre == 'ninguno') {
+        this._router.navigate(['/home']);
+      }
     })
+  }
+  redirigir () {
+    this._router.navigate(['/zapatillas']); // ? Esto nos lleva a cualquier ruta de nuestro proyecto.
   }
 
 }
