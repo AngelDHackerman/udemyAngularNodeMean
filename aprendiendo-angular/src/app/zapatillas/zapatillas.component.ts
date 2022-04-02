@@ -1,11 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { configuracion } from "../models/configuracion"; // ? Asi se importan las variables de otros archivos.
 import { Zapatillas } from "../models/zapatilla";
+import { ZapatillaService } from "../service/zapatilla.service";
 
 
 @Component ({
   selector: 'zapatillas',
-  templateUrl: './zapatillas.component.html'
+  templateUrl: './zapatillas.component.html',
+  providers: [ZapatillaService], // ?Asi podemos usar el zapatillas service que importamos arriba
 })
 
 export class ZapatillasComponent implements OnInit{
@@ -15,7 +17,9 @@ export class ZapatillasComponent implements OnInit{
   public color: string;
   public mi_marca: string;
 
-  constructor () {
+  constructor (
+    private _zapatillaService: ZapatillaService
+  ) {
     this.zapatillas = [
       new Zapatillas('Nike Airmax', 'Nike', 'Rojas', 190, true),
       new Zapatillas('Reebook Classic', 'Reebook', 'Blanco', 80, true), // ? Esto es una clase, un molde para las zapatillas
@@ -28,7 +32,8 @@ export class ZapatillasComponent implements OnInit{
     this.mi_marca = 'Angel\'s shoes';
   }
   ngOnInit() {
-      console.log(this.zapatillas);
+      this._zapatillaService.getZapatillas();
+      // alert(this._zapatillaService.getTexto());
       this.getMarcas();
   }
 
