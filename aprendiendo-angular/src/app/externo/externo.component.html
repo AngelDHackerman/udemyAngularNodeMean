@@ -1,3 +1,8 @@
+<p>{{ fecha | date: 'dd//mm/yyyy' }}</p>
+
+
+<hr>
+
 <input type="text" [(ngModel)]="user.id" (keyup.enter)="cargaUsuario()">
 
 <div *ngIf="!user">
