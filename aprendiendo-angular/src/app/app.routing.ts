@@ -20,6 +20,7 @@ import { CursosComponent } from "./cursos/cursos.component";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}, // ? Este sera el componente que se cargara por defecto, por eso el path se deja vacio.
+  {path: 'home', component: HomeComponent},
   {path: 'zapatillas', component: ZapatillasComponent},
   {path: 'videojuego', component: VideojuegoComponent},
   {path: 'cursos', component: CursosComponent},
