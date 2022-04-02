@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core"; // ? Esto es necesario para usar los servicios.
+import { Injectable } from "@angular/core"; // * Esto se importa para poder injectar nuestros servicios en otras clases
 import { Zapatillas } from "../models/zapatilla";
 
 @Injectable()
