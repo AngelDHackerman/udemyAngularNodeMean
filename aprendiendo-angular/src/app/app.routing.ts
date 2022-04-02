@@ -23,7 +23,9 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'zapatillas', component: ZapatillasComponent},
   {path: 'videojuego', component: VideojuegoComponent},
-  {path: 'cursos', component: CursosComponent},
+  {path: 'cursos', component: CursosComponent}, // * las rutas de /:nombre/: son parametros opcionales
+  {path: 'cursos/:nombre', component: CursosComponent}, // ? /:nombre es un parametro que se le puede pasar por url
+  {path: 'cursos/:nombre/:apellidos', component: CursosComponent},
   {path: '**', component: HomeComponent} // ! Esta es la ruta 404, para cuando no se encuentra la pagina
 ];
 
