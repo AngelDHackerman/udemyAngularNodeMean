@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.identificado = false;
+    // console.log(this.identificado)
    }
 
   ngOnInit(){
@@ -17,9 +18,11 @@ export class HomeComponent implements OnInit {
   }
   setIdentificado () {
     this.identificado = true;
+    // console.log(this.identificado)
   }
   unsetIdentificado () {
     this.identificado = false;
+    // console.log(this.identificado)
   }
 
 }
