@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router'; // * Esto es n
 export class CursosComponent implements OnInit {
 
   public nombre: string;
+  public followers: number;
 
   constructor(
     private _route: ActivatedRoute,
@@ -18,6 +19,7 @@ export class CursosComponent implements OnInit {
   ngOnInit () {
     this._route.params.subscribe((params: Params) => {  // ? El metodo subscribe sirve para recojer el nombre pasado por la url.
       this.nombre = params['nombre'];
+      this.followers = +params['followers']; // ! el signo + hace del params['followers'] un dato de tipo Number
       console.log(this.nombre)
     })
   }
