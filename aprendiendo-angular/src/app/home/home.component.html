@@ -1,1 +1,11 @@
-<p>home works!</p>
+<h1>Pagina principal</h1>
+
+<div *ngIf="identificado; else noIdentificado"> <!-- ? Asi se crea una funcion if else en Angular -->
+  <h3>Estas identificado en la aplicacion</h3>
+  <button (click)="unsetIdentificado">Borrar identificacion</button>
+</div>
+
+<ng-template #noIdentificado>
+  <p>No estas identificado, pulsa este boton para identificarte.</p>
+  <button (click)="setIdentificado()">Identificarse</button>
+</ng-template>
