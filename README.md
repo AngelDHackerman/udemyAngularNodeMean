@@ -34,6 +34,20 @@
 
 ## Primeros pasos con el backEnd
 
+### Instalando y controlando mongoDb
+
+`sudo systemctl status mongodb` estado de mongoDb en ubuntu.
+
+`sudo systemctl stop mongodb` Detiene a mongoDb.
+
+`sudo systemctl start mongodb` Inicia a mongoDb.
+
+`sudo systemctl restart mongodb` Reinica a mongoDb. 
+
+`sudo systemctl disable mongodb` Desactiva el inicio automatico con el servidor.
+
+`sudo systemctl enable mongodb` Activa el inicio automatico con el servidor.
+
 ### Instalando dependencias:
 
 Estando en la carpeta del proyecto ejectuamos los siguientes comandos:
