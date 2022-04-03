@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { PeticionesService } from '../service/peticiones.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class ExternoComponent implements OnInit {
   public fecha: any;
 
   public new_user: any;
+  public usuario_guardado: any;
 
   constructor(
     private _peticionesService: PeticionesService
@@ -42,6 +44,18 @@ export class ExternoComponent implements OnInit {
         console.log(<any>error);
       }
     );
+  }
+  onSubmit (form: any) {
+    this._peticionesService.addUser(this.new_user).subscribe(
+      response => {
+        this.usuario_guardado = response
+
+        form.reset()
+      },
+      error => {
+        console.error(<any>error);
+      }
+    )
   }
 
 }
