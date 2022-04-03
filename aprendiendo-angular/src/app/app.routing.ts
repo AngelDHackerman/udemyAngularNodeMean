@@ -16,6 +16,7 @@ import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
 import { VideojuegoComponent } from "./videojuego/videojuego.component";
 import { CursosComponent } from "./cursos/cursos.component";
 import { ExternoComponent } from "./externo/externo.component";
+import { ContactoComponent } from "./contacto/contacto.component";
 
 // * Array de rutas (aqui vamos a dar de alta las rutas y configurar las rutas)
 
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   {path: 'cursos/:nombre/:apellidos', component: CursosComponent},
   {path: 'cursos/:nombre/:followers', component: CursosComponent},
   {path: 'externo', component: ExternoComponent},
+  {path: 'contacto', component: ContactoComponent},
   {path: '**', component: HomeComponent} // ! Esta es la ruta 404, para cuando no se encuentra la pagina
 ];
 
