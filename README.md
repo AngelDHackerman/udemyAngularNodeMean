@@ -30,3 +30,23 @@
 4. Generando componentes. 
 
 `ng generate component cursos` Asi creamos un nuevo componente desde la consola de comandos.
+
+
+## Primeros pasos con el backEnd
+
+### Instalando dependencias:
+
+Estando en la carpeta del proyecto ejectuamos los siguientes comandos:
+
+`--save` es para que se quede guardado en el proyecto local.
+
+`npm install express --save` instalado el modulo express.(es un framework para trabajar con http)
+
+`npm install body-parser --save` moduclo de body-parser.
+
+`npm install connect-multiparty --save` permite subir archivos al backEnd. y trabajar con el protocolo files.
+
+`npm install mongoose --save` Es una serie de metodos para poder trabajar con MongoDb.
+
+`npm install nodemon --save-dev` Refresca automaticamente los cambios en el codigo. (super util)
+
