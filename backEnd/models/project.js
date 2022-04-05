@@ -9,7 +9,8 @@ let ProjectSchema = Schema({
   description: String,
   category: String,
   year: Number,
-  langs: [String]
+  langs: String,
+  image: String,
 });
 
 module.exports = mongoose.model('Project', ProjectSchema); // * con esto exportamos el "molde a otros archivos", 'project' es el nombre de la identidad, el segundo parametro es el schema tal cual.
