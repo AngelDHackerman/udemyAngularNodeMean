@@ -64,3 +64,6 @@ Estando en la carpeta del proyecto ejectuamos los siguientes comandos:
 
 `npm install nodemon --save-dev` Refresca automaticamente los cambios en el codigo. (super util)
 
+
+
+## Por el momento suspendido el curso, tocamos el back end y ahora me enfocare en Angular.
