@@ -13,3 +13,7 @@ let ProjectSchema = Schema({
 });
 
 module.exports = mongoose.model('Project', ProjectSchema); // * con esto exportamos el "molde a otros archivos", 'project' es el nombre de la identidad, el segundo parametro es el schema tal cual.
+// Project se convierte en 'projects' --> guarda los documentos en la colection.
+
+// ! investigar que es el MVC. (modelo vista controlador).
+
